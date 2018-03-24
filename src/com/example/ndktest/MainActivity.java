@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             TextView tv = (TextView) rootView.findViewById(R.id.textview);
             tv.setText(NdkNativeJava.getCallResultByC());
-            NdkNativeJava.updateFile(filePath);
+            //NdkNativeJava.updateFile(filePath);
             Button btn = (Button) rootView.findViewById(R.id.button);
             editText = (EditText) rootView.findViewById(R.id.edittext);
             btn.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 //					NdkNativeJava.writeFile(filePath, message);
 					int[] resultIntArray = NdkNativeJava.updateIntArray(new int[]{1,2,3,4,5});
 					for(int i = 0;i<resultIntArray.length;i++){
-						NdkNativeJava.writeFile(filePath, "\r\n"+UtilsTool.getLocalDate()+"----"+resultIntArray[i]);
+						//NdkNativeJava.writeFile(filePath, "\r\n"+UtilsTool.getLocalDate()+"----"+resultIntArray[i]);
 					}
 				}
 			});
